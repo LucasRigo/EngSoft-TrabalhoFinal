@@ -2,8 +2,8 @@
     session_start();
     include_once("Conexao.php");
 
-    $nome = $_POST['prodNome'];
-    $preco = $_POST['prodPreco'];
+    $nome = $_POST['ProdNome'];
+    $preco = $_POST['ProdPreco'];
 
     $result_produtos = "INSERT INTO produtos (nome, preco) VALUES ('$nome','$preco')";
     mysqli_query($conecta, $result_produtos);

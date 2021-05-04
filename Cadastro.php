@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Cadastro de produtos</h1>
+        <h1><b>Cadastro de Produtos</b></h1>
         <h3>Preencha os dados do produto que deseja cadastrar</h3>
         <?php
         if(isset($_SESSION['msg'])){
@@ -28,7 +28,7 @@
 
             <div class="form-group">
                 <label><b>Produto:</b></label>
-                <input class="form-control" name="prodNome" type="text" placeholder="Insira o nome do produto"><br>
+                <input class="form-control" name="ProdNome" type="text" placeholder="Insira o nome do produto" required><br>
             </div>
 
             <div class="form-group">
@@ -38,6 +38,10 @@
 
             <input id="cadastra" name="cadastra" type="submit" value="CADASTRAR">
         </form>
+    </div>
+    <br>
+    <div class="container">
+        <a href="Listagem.php"><button>Listar Produtos Cadastrados</button></a>
     </div>
 </body>
 </html>

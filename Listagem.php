@@ -14,7 +14,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <div class="container">
         <h1>Listagem de Produtos</h1>
+        <br>
         <?php
         if(isset($_SESSION['msg'])){
             echo $_SESSION['msg'];
@@ -22,14 +24,20 @@
         }
         $lista_produtos = "SELECT * FROM produtos";
         $resultado_lista = mysqli_query($conecta, $lista_produtos);
+        
         while($row_produto = mysqli_fetch_assoc($resultado_lista)){
-            echo "ID: " . $row_produto['id'] . "<br>";
-            echo "Nome: " . $row_produto['nome'] . "<br>";
-            echo "Preco: " . $row_produto['preco'] . "<br>";
-            echo "<br><br>";
-
+            echo "<b>_____________________________________________</b>";
+            echo "<br>";
+            echo "<b>ID:</b> " . $row_produto['id'] . "<br>";
+            echo "<b>Nome:</b> " . $row_produto['nome'] . "<br>";
+            echo "<b>Preco:</b> R$ " . $row_produto['preco'] . "<br>";
+            
         }
         ?>
+
+        <br>
+        <a href="Cadastro.php"><button>Cadastrar Produtos</button></a>
+        </div>
         
     </body>
 </html>
