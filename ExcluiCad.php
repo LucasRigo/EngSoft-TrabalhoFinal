@@ -24,8 +24,8 @@
 
     <div id="menu">
 		<ul>
-            <li class="direita"><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
-			<li class="esquerda"><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
+            <li ><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar Produtos</a></li>
+			<li ><a href="Listagem.php"><i class="fas fa-list"></i> Listar Produtos</a></li>
 		</ul>
 	</div>
 
@@ -42,7 +42,7 @@
         <form action="ProcExcluiCadastro.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $row_produto['id']; ?>">
 
-            <input id="exclui" name="exclui" type="submit" value="Excluir">
+            <button class="btExclui" type="submit"><i class='fas fa-trash-alt'></i> Excluir Cadastro</button>
         </form>
     </div>
     <br>

@@ -21,8 +21,8 @@
 
         <div id="menu">
 		    <ul>
-                <li class="direita"><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
-                <li class="esquerda"><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
+                <li ><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar Produtos</a></li>
+                <li ><a href="Listagem.php"><i class="fas fa-list"></i> Listar Produtos</a></li>
 		    </ul>
 	    </div>
 
@@ -30,7 +30,7 @@
         <h1>Listagem de Produtos</h1>
         <br>
 
-        <a href="Cadastro.php"><button type="button" class="btn btn-info">Cadastrar Produtos</button></a>
+        <a href="Cadastro.php"><button type="button" class="btn btn-info"><i class="fas fa-plus-square"></i> Adicionar Cadastro</button></a>
         <br><br>
 
         <?php
@@ -43,7 +43,7 @@
         
         while($row_produto = mysqli_fetch_assoc($resultado_lista)){
   
-            echo "<table class='table table-striped table-sm'";
+            echo "<table class='table table-dark table-striped table-sm'";
             
             echo "<tr>";
             echo "<td><b>ID:</b></td> <td>" . $row_produto['id'] . "</td>";
@@ -58,8 +58,8 @@
             echo "</tr>";
 
             echo "<tr>";
-            echo "<td><a href='EditaCad.php?id=" . $row_produto['id'] . "'><button type='button' class='btn btn-info'><i class='fas fa-edit'></i>Editar</button></a></td>";
-            echo "<td><a href='ExcluiCad.php?id=" . $row_produto['id'] . "'><button type='button' class='btn btn-info'><i class='fas fa-trash-alt'></i>Excluir</button></a></td>";
+            echo "<td><a href='EditaCad.php?id=" . $row_produto['id'] . "'><button type='button' class='btn btn-info'><i class='fas fa-edit'></i> Editar</button></a></td>";
+            echo "<td><a href='ExcluiCad.php?id=" . $row_produto['id'] . "'><button type='button' class='btn btn-info'><i class='fas fa-trash-alt'></i> Excluir</button></a></td>";
             echo "</tr>";
 
             echo "</table><br>";

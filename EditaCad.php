@@ -24,8 +24,8 @@
 
     <div id="menu">
 		<ul>
-			<li class="direita"><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar</a></li>
-			<li class="esquerda"><a href="Listagem.php"><i class="fas fa-list"></i> Listagem</a></li>
+            <li ><a href="Cadastro.php"><i class="fas fa-book"></i> Cadastrar Produtos</a></li>
+			<li ><a href="Listagem.php"><i class="fas fa-list"></i> Listar Produtos</a></li>
 		</ul>
 	</div>
 
@@ -51,7 +51,7 @@
                 <input class="form-control" name="ProdPreco" type="number" min="0" step="0.01" placeholder="Insira o preço do produto" value="<?php echo $row_produto['preco']; ?>" required><br><br>
             </div>
 
-            <input id="cadastra" name="cadastra" type="submit" value="EDITAR">
+            <button class="btConfirma" type="submit"><i class='fas fa-edit'></i> Salvar Edição</button>
         </form>
     </div>
     <br>
